@@ -88,7 +88,7 @@ public class KMP
 			{
 				listOfWordIndices.add(i - word.length() + 1);
 				System.out.println(i - word.length() + 1);
-				matchedPrefixLength = prefixTable[matchedPrefixLength - 1] + 1;
+				matchedPrefixLength = prefixTable[matchedPrefixLength - 1];
 			}
 			
 		}
@@ -119,7 +119,10 @@ public class KMP
 				}
 				stringBuilder.append(white);
 				System.out.print(stringBuilder.toString());
-				matchedPrefixLength = prefixTable[matchedPrefixLength - 1] + 1;
+				matchedPrefixLength = prefixTable[matchedPrefixLength - 1];
+				if(questionMarkMatchesAll)
+					if(currentChar == '?')
+						matchedPrefixLength++;
 				listOfWordIndices.add(counter);
 			}
 			else
