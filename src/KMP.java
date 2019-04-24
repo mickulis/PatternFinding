@@ -1,8 +1,8 @@
 /**
  *
  * TODO:
- *	fix a bug with text: ??B?, word: AAB
- *
+ * 	fix a bug with text: ??B?, word: AAB
+ * 	idea: move prefixTable to the left and adjust some formulas, so when B is matched, it goes to prefixTable[indexOfB], but if it's not matched it goes to prefixTable[indexOfB - 1] ????
  *
  */
 
